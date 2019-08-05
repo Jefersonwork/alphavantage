@@ -1,27 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from "./components/header";
-import { H1 } from "./components/text";
-import { Wrap, ContainerFluid, Card, Container } from "./components/content";
-import { Search, Button } from "./components/form";
+import { Header } from "./components/styled/header";
+
+import Search from "./components/functional/search";
+import  Quote from "./components/functional/quote";
+import Graphic from "./components/functional/graphic";
+
+import { Card } from "./components/styled/content";
 
 function App() {
-  
   return (
     <div className="App">
-      <Header>
-        <Wrap>
-          <H1>IEX</H1>
+        <Header>
           <Search />
-          <Button>Buscar</Button>
-        </Wrap>
-      </Header>
-      <ContainerFluid>
-        
-      </ContainerFluid>
-      <Container>
-
-      </Container>
+        </Header>
+        <div>
+          <Card>
+            <Quote />
+            <Graphic />
+          </Card>
+        </div>
     </div>
   );
 }

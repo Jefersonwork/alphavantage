@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
-export const Search = styled.input`
+export const Form = styled.div`
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const InputText = styled.input`
   width: 100%;
   border: none;
   font-size: 20px;
   color: #fff;
   border-bottom: 2px solid #fff;
   background: none;
-`;
+`
 
 export const Button = styled.button`
   padding: 4px;
