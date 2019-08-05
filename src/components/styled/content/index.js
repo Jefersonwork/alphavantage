@@ -16,11 +16,12 @@ export const Wrap = styled.div`
   align-items: center;
   width: 100%;
 `
-
 export const Card = styled.div`
+  width: 600px;
   display: block;
   padding: 5px;
-  border: 1px solid #000;
+  margin: 30px auto;
+  box-shadow: 1px 1px 8px #000;
 `
 export const CardHeader = styled.div`
   text-align: center;

@@ -7,7 +7,8 @@ import { H2, Label, Span } from "../../styled/text";
 
 const Quote = ({quote}) => {
 
-  if (quote["Global Quote"] !==  undefined) {
+  if (quote["Global Quote"] !=  undefined) {
+    console.log(quote["Global Quote"]);    
     let data = {
       symbol: quote["Global Quote"]["01. symbol"],
       price: quote["Global Quote"]["05. price"],
@@ -29,19 +30,7 @@ const Quote = ({quote}) => {
     )
   }
 
-  return(
-    <CardHeader>
-      <H2>AAPL</H2>
-      <div>
-        <Label>
-          204.02
-        </Label>
-        <Span color="red">
-          -4.41 (-2.12%)
-        </Span>
-      </div>
-    </CardHeader>
-  );
+  return(<div></div>);
 }
 
 export default connect(state => ({
