@@ -7,8 +7,7 @@ import { H2, Label, Span } from "../../styled/text";
 
 const Quote = ({quote}) => {
 
-  if (quote["Global Quote"] !=  undefined) {
-    console.log(quote["Global Quote"]);    
+  if (quote["Global Quote"] !==  undefined) {
     let data = {
       symbol: quote["Global Quote"]["01. symbol"],
       price: quote["Global Quote"]["05. price"],

@@ -21,7 +21,7 @@ const Search = ({ changeSymbol, getQuote, modules }) => (
           return;
         }
       }}>
-      <img src={img} />
+      <img src={img} alt="buscar"/>
     </Button>
   </Form>
 )

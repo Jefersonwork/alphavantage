@@ -19,11 +19,8 @@ class Graphic extends PureComponent {
   }
 
   getData = () => {
-    const { base } = this.state;
-
-    console.log("get data")
-    if (base["Time Series (1min)"]) {
-      let obj = this.props.data["Time Series (1min)"]["Time Series (1min)"];
+    if (this.props.data["Time Series (1min)"]) {
+      let obj = this.props.data["Time Series (1min)"];
       let result = Object.keys(obj).map(function(key) {
         return [(key), obj[key]];
       });
@@ -41,8 +38,6 @@ class Graphic extends PureComponent {
   render() {
     let { data } = this.state;
     this.getData();
-    console.log(data)
-    console.log("render");
     if (data.length > 1) {
       return (
         <CardBody>
@@ -58,7 +53,10 @@ class Graphic extends PureComponent {
             <XAxis dataKey="uv" type="category"/>
             <YAxis dataKey="uv" />
             <Tooltip />
-            <Area type="monotone" dataKey="uv" stroke={data[0]>data[data.length]?"gree":"red"} fill={data[0]>data[data.length]?"gree":"red"} />
+            <Area type="monotone" dataKey="uv" 
+              stroke={data[0].uv>data[data.length-1].uv?"red":"green"} 
+              fill={data[0].uv>data[data.length-1].uv?"red":"green"} 
+            />
           </AreaChart>
         </CardBody>
       );

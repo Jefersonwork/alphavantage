@@ -6,7 +6,6 @@ import Search from "./components/functional/search";
 import  Quote from "./components/functional/quote";
 import Graphic from "./components/functional/graphic";
 
-import { Card } from "./components/styled/content";
 import { H1 } from "./components/styled/text";
 
 function App() {
